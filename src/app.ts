@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors'; // Import cors
 import { graphqlHTTP } from 'express-graphql';
 import fragranceRoutes from './routes/fragranceRoutes';
 import schema from './schema';
@@ -10,6 +11,8 @@ import routes from './routes';
 dotenv.config();
 
 const app = express();
+app.use(cors());
+
 const port = process.env.PORT;
 app.use(bodyParser.json());
 app.use(routes);

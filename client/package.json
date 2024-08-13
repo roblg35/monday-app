@@ -14,7 +14,7 @@
     "express-graphql": "^0.12.0",
     "graphql": "^15.9.0",
     "monday-sdk-js": "^0.5.0",
-    "monday-ui-react-core": "^1.54.0",
+    "monday-ui-react-core": "^2.130.2",
     "sqlite3": "^5.1.7"
   },
   "eslintConfig": {

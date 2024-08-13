@@ -1,4 +1,4 @@
-export declare type MoveBy = {
+export type MoveBy = {
     main?: number;
     secondary?: number;
 };
