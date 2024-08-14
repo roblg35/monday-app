@@ -1,5 +1,5 @@
-import { Request, Response } from 'express';
-import FragranceService from '../services/fragranceService';
+import { Request, Response } from "express";
+import FragranceService from "../services/fragranceService";
 
 const fragranceController = {
   getAllFragrances: async (req: Request, res: Response) => {
@@ -14,7 +14,7 @@ const fragranceController = {
     try {
       const fragrance = await FragranceService.getFragranceById(req.params.id);
       if (!fragrance) {
-        res.status(404).json({ error: 'Fragrance not found' });
+        res.status(404).json({ error: "Fragrance not found" });
       } else {
         res.status(200).json(fragrance);
       }
@@ -41,7 +41,7 @@ const fragranceController = {
   deleteFragrance: async (req: Request, res: Response) => {
     try {
       const id = await FragranceService.deleteFragrance(req.params.id);
-      res.status(200).json({ message: 'Fragrance deleted successfully', id });
+      res.status(200).json({ message: "Fragrance deleted successfully", id });
     } catch (error) {
       res.status(500).json({ error: error.message });
     }
