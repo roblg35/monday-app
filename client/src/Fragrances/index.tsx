@@ -8,7 +8,7 @@ import FragranceModal from "./Modal.tsx";
 import FragranceTable from "./Table.tsx";
 import { Fragrance } from "./types.ts";
 
-const MyFragrances = () => {
+const Fragrances = () => {
   const [selectedFragrance, setSelectedFragrance] = useState<Fragrance>();
   const [show, setShow] = useState(false);
 
@@ -21,7 +21,11 @@ const MyFragrances = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
   return (
-    <Flex style={{ padding: "0px 40px" }} direction="Column" align="Start">
+    <Flex
+      style={{ padding: "0px 40px" }}
+      direction={Flex.directions.COLUMN}
+      align={Flex.align.START}
+    >
       <Heading>Fragrances</Heading>
       <Button style={{ margin: "24px 0px" }} onClick={() => setShow(true)}>
         Add Fragrence
@@ -43,4 +47,4 @@ const MyFragrances = () => {
   );
 };
 
-export default MyFragrances;
+export default Fragrances;

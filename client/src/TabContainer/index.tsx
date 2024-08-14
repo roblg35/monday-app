@@ -7,8 +7,8 @@ import {
   TabPanels,
   TabsContext,
 } from "monday-ui-react-core";
-import MyFragrances from "../Fragrances/index.tsx";
-import FragrenceForm from "../OrderForm/Form.jsx";
+import Fragrances from "../Fragrances/index.tsx";
+import OrderForm from "../OrderForm/Form.jsx";
 
 const TabContainer = () => {
   return (
@@ -20,10 +20,10 @@ const TabContainer = () => {
         </TabList>
         <TabPanels>
           <TabPanel className="monday-storybook-tabs_bg-color">
-            <FragrenceForm />
+            <OrderForm />
           </TabPanel>
           <TabPanel className="monday-storybook-tabs_bg-color">
-            <MyFragrances />
+            <Fragrances />
           </TabPanel>
         </TabPanels>
       </TabsContext>

@@ -7,7 +7,7 @@ import mondaySdk from "monday-sdk-js";
 
 const monday = mondaySdk();
 
-const FragranceForm = () => {
+const OrderForm = () => {
   const { loading, error, data } = useQuery(GET_ALL_FRAGRANCES);
   const [formData, setFormData] = useState({
     firstName: "",
@@ -172,4 +172,4 @@ const FragranceForm = () => {
   );
 };
 
-export default FragranceForm;
+export default OrderForm;

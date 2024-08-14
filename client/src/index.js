@@ -5,9 +5,12 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
 
+const GRAPHQL_URI =
+  process.env.REACT_APP_GRAPHQL_URI || "http://localhost:8080/graphql";
+
 // Initialize Apollo Client
 const client = new ApolloClient({
-  uri: "http://localhost:8080/graphql",
+  uri: GRAPHQL_URI,
   cache: new InMemoryCache(),
 });
 

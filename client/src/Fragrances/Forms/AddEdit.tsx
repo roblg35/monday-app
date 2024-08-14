@@ -76,10 +76,10 @@ const AddEditFragrance = ({
       <form onSubmit={handleSubmit}>
         <TextField
           title="ID"
-          type="text"
+          type={TextField.types.TEXT}
           id="id"
           name="id"
-          disabled={initialFragrance}
+          disabled={!!initialFragrance}
           value={fragrance.id}
           onChange={handleChange}
           required
@@ -87,7 +87,7 @@ const AddEditFragrance = ({
         <TextField
           title="Name"
           size={TextField.sizes.MEDIUM}
-          type="text"
+          type={TextField.types.TEXT}
           id="name"
           name="name"
           value={fragrance.name}
@@ -105,7 +105,7 @@ const AddEditFragrance = ({
         <TextField
           title="category"
           size={TextField.sizes.MEDIUM}
-          type="text"
+          type={TextField.types.TEXT}
           id="category"
           name="category"
           value={fragrance.category}
@@ -115,14 +115,14 @@ const AddEditFragrance = ({
         <TextField
           title="Image"
           size={TextField.sizes.MEDIUM}
-          type="text"
+          type={TextField.types.TEXT}
           id="image_url"
           name="image_url"
           value={fragrance.image_url}
           onChange={handleChange}
           required
         />
-        <Button type="submit">
+        <Button type={Button.types.SUBMIT}>
           {initialFragrance ? "Edit" : "Add"} Fragrance
         </Button>
       </form>
