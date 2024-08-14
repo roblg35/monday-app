@@ -5,16 +5,15 @@ import mondaySdk from "monday-sdk-js";
 import "monday-ui-react-core/dist/main.css";
 //Explore more Monday React Components here: https://style.monday.com/
 // import AttentionBox from "monday-ui-react-core/dist/AttentionBox.js";
-// import Board from "./Board";
-import FragrenceForm from "./Form";
-import MyFragrances from "./Fragrances.tsx";
+
+import TabContainer from "./TabContainer/index.tsx";
 
 // Usage of mondaySDK example, for more information visit here: https://developer.monday.com/apps/docs/introduction-to-the-sdk/
 const monday = mondaySdk();
 
 const App = () => {
   const [context, setContext] = useState();
-  console.log("!!", context);
+  console.log(context);
 
   useEffect(() => {
     // Notice this method notifies the monday platform that user gains a first value in an app.
@@ -34,10 +33,8 @@ const App = () => {
   // Let's start building your amazing app, which will change the world!`;
 
   return (
-    <div className="App" style={{ display: "block" }}>
-      <FragrenceForm />
-      <MyFragrances />
-      {/* <Board /> */}
+    <div className="App">
+      <TabContainer />
     </div>
   );
 };
